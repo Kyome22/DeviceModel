@@ -23,5 +23,10 @@ let package = Package(
             name: "DeviceModel",
             swiftSettings: swiftSettings
         ),
+        .testTarget(
+            name: "DeviceModelTests",
+            dependencies: ["DeviceModel"],
+            swiftSettings: swiftSettings
+        )
     ]
 )
