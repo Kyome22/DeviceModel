@@ -68,6 +68,7 @@ public enum iPhone: String {
     case iPhone18_2 = "iPhone18,2"
     case iPhone18_3 = "iPhone18,3"
     case iPhone18_4 = "iPhone18,4"
+    case iPhone18_5 = "iPhone18,5"
 
     public var name: String {
         switch self {
@@ -134,6 +135,7 @@ public enum iPhone: String {
         case .iPhone18_2: "iPhone 17 Pro Max"
         case .iPhone18_3: "iPhone 17"
         case .iPhone18_4: "iPhone Air"
+        case .iPhone18_5: "iPhone 17e"
         }
     }
 }
