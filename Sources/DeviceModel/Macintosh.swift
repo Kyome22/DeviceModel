@@ -370,4 +370,21 @@ public enum Macintosh: String {
         case .MacPro7_1: "Mac Pro (2019)"
         }
     }
+
+    public var hasNotch: Bool {
+        switch self {
+        case .Mac14_2, .Mac14_5, .Mac14_6, .Mac14_7, .Mac14_9, .Mac14_10, .Mac14_15:
+            fallthrough
+        case .Mac15_3, .Mac15_6, .Mac15_7, .Mac15_8, .Mac15_9, .Mac15_10, .Mac15_11, .Mac15_12, .Mac15_13:
+            fallthrough
+        case .Mac16_1, .Mac16_5, .Mac16_6, .Mac16_7, .Mac16_8, .Mac16_12, .Mac16_13:
+            fallthrough
+        case .Mac17_2, .Mac17_3, .Mac17_4, .Mac17_6, .Mac17_7, .Mac17_8, .Mac17_9:
+            fallthrough
+        case .MacBookPro18_1, .MacBookPro18_2, .MacBookPro18_3, .MacBookPro18_4:
+            true
+        default:
+            false
+        }
+    }
 }
