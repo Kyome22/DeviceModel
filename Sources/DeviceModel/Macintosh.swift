@@ -94,6 +94,13 @@ public enum Macintosh: String {
     case Mac16_12 = "Mac16,12"
     case Mac16_13 = "Mac16,13"
     case Mac17_2 = "Mac17,2"
+    case Mac17_3 = "Mac17,3"
+    case Mac17_4 = "Mac17,4"
+    case Mac17_5 = "Mac17,5"
+    case Mac17_6 = "Mac17,6"
+    case Mac17_7 = "Mac17,7"
+    case Mac17_8 = "Mac17,8"
+    case Mac17_9 = "Mac17,9"
     case MacBook1_1 = "MacBook1,1"
     case MacBook2_1 = "MacBook2,1"
     case MacBook3_1 = "MacBook3,1"
@@ -262,6 +269,13 @@ public enum Macintosh: String {
         case .Mac16_12: "MacBook Air (M4 13-inch 2025)"
         case .Mac16_13: "MacBook Air (M4 15-inch 2025)"
         case .Mac17_2: "MacBook Pro (M5 14-inch 2025)"
+        case .Mac17_3: "MacBook Air (M5 13-inch 2026)"
+        case .Mac17_4: "MacBook Air (M5 15-inch 2026)"
+        case .Mac17_5: "MacBook Neo (A18 13-inch 2026)"
+        case .Mac17_6: "MacBook Pro (M5 Max 16-inch 2026)"
+        case .Mac17_7: "MacBook Pro (M5 Max 14-inch 2026)"
+        case .Mac17_8: "MacBook Pro (M5 Pro 16-inch 2026)"
+        case .Mac17_9: "MacBook Pro (M5 Pro 14-inch 2026)"
         case .MacBook1_1: "MacBook (Early 2006)"
         case .MacBook2_1: "MacBook (Late 2006)"
         case .MacBook3_1: "MacBook (Late 2007)"
@@ -357,4 +371,3 @@ public enum Macintosh: String {
         }
     }
 }
-
