@@ -399,7 +399,7 @@ public enum Macintosh: String {
             fallthrough
         case .Mac16_1, .Mac16_5, .Mac16_6, .Mac16_7, .Mac16_8, .Mac16_12, .Mac16_13:
             fallthrough
-        case .Mac17_2, .Mac17_3, .Mac17_4, .Mac17_6, .Mac17_7, .Mac17_8, .Mac17_9, .Mac17_10, .Mac17_11, .Mac17_12, .Mac17_13:
+        case .Mac17_2, .Mac17_3, .Mac17_4, .Mac17_6, .Mac17_7, .Mac17_8, .Mac17_9:
             fallthrough
         case .Mac18_1:
             fallthrough
