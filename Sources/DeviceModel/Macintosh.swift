@@ -101,6 +101,16 @@ public enum Macintosh: String {
     case Mac17_7 = "Mac17,7"
     case Mac17_8 = "Mac17,8"
     case Mac17_9 = "Mac17,9"
+    case Mac17_10 = "Mac17,10"
+    case Mac17_11 = "Mac17,11"
+    case Mac17_12 = "Mac17,12"
+    case Mac17_13 = "Mac17,13"
+    case Mac17_14 = "Mac17,14"
+    case Mac17_15 = "Mac17,15"
+    case Mac17_16 = "Mac17,16"
+    case Mac18_1 = "Mac18,1"
+    case Mac18_2 = "Mac18,2"
+    case Mac18_5 = "Mac18,5"
     case MacBook1_1 = "MacBook1,1"
     case MacBook2_1 = "MacBook2,1"
     case MacBook3_1 = "MacBook3,1"
@@ -276,6 +286,16 @@ public enum Macintosh: String {
         case .Mac17_7: "MacBook Pro (M5 Max 14-inch 2026)"
         case .Mac17_8: "MacBook Pro (M5 Pro 16-inch 2026)"
         case .Mac17_9: "MacBook Pro (M5 Pro 14-inch 2026)"
+        case .Mac17_10: "MacBook Pro (M5 Max 16-inch PROLED XDR Display 2026)"
+        case .Mac17_11: "MacBook Pro (M5 Max 14-inch PROLED XDR Display 2026)"
+        case .Mac17_12: "MacBook Pro (M5 Pro 16-inch PROLED XDR Display 2026)"
+        case .Mac17_13: "MacBook Pro (M5 Pro 14-inch PROLED XDR Display 2026)"
+        case .Mac17_14: "Mac Studio (M5 Max 2026)"
+        case .Mac17_15: "Mac Studio (M5 Ultra 2026)"
+        case .Mac17_16: "Mac mini (M5 Pro 2026)"
+        case .Mac18_1: "MacBook Pro (M6 14-inch 2026)"
+        case .Mac18_2: "iMac (M6 24-inch 2026)"
+        case .Mac18_5: "Mac mini (M6 2026)"
         case .MacBook1_1: "MacBook (Early 2006)"
         case .MacBook2_1: "MacBook (Late 2006)"
         case .MacBook3_1: "MacBook (Late 2007)"
@@ -380,6 +400,8 @@ public enum Macintosh: String {
         case .Mac16_1, .Mac16_5, .Mac16_6, .Mac16_7, .Mac16_8, .Mac16_12, .Mac16_13:
             fallthrough
         case .Mac17_2, .Mac17_3, .Mac17_4, .Mac17_6, .Mac17_7, .Mac17_8, .Mac17_9:
+            fallthrough
+        case .Mac18_1:
             fallthrough
         case .MacBookPro18_1, .MacBookPro18_2, .MacBookPro18_3, .MacBookPro18_4:
             true
