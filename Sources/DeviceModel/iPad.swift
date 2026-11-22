@@ -108,6 +108,8 @@ public enum iPad: String {
     case iPad17_2 = "iPad17,2"
     case iPad17_3 = "iPad17,3"
     case iPad17_4 = "iPad17,4"
+    case iPad19_1 = "iPad19,1"
+    case iPad19_2 = "iPad19,2"
 
     public var name: String {
         switch self {
@@ -214,6 +216,8 @@ public enum iPad: String {
         case .iPad17_2: "iPad Pro (M5 11-inch Cellular)"
         case .iPad17_3: "iPad Pro (M5 13-inch)"
         case .iPad17_4: "iPad Pro (M5 13-inch Cellular)"
+        case .iPad19_1: "iPad mini (A20 Pro)"
+        case .iPad19_2: "iPad mini (A20 Pro Cellular)"
         }
     }
 }
