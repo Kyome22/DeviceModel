@@ -31,6 +31,17 @@ public enum DeviceModel {
         }
     }
 
+    public var displayCutout: DisplayCutout? {
+        switch self {
+        case let .Macintosh(value):
+            value.displayCutout
+        case let .iPhone(value):
+            value.displayCutout
+        case .iPad:
+            nil
+        }
+    }
+
 #if os(macOS)
     public static func current() -> DeviceModel? {
         var size = Int.zero
@@ -53,23 +64,31 @@ public enum DeviceModel {
 
 #if os(iOS)
     public static func current() -> DeviceModel? {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-
-        let machineMirror = Mirror(reflecting: systemInfo.machine)
-        let machine = machineMirror.children.compactMap { $0.value as? CChar }
-
-        guard let code = String(cString: machine, encoding: .utf8) else {
+        guard let code = currentModelCode() else {
             return nil
         }
 
-        return if let value  = _iPhone(rawValue: code) {
+        return if let value = _iPhone(rawValue: code) {
             DeviceModel.iPhone(value)
         } else if let value = _iPad(rawValue: code) {
             DeviceModel.iPad(value)
         } else {
             nil
         }
+    }
+
+    private static func currentModelCode() -> String? {
+#if targetEnvironment(simulator)
+        ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]
+#else
+        var systemInfo = utsname()
+        uname(&systemInfo)
+
+        let machineMirror = Mirror(reflecting: systemInfo.machine)
+        let machine = machineMirror.children.compactMap { $0.value as? CChar }
+
+        return String(cString: machine, encoding: .utf8)
+#endif
     }
 #endif
 }

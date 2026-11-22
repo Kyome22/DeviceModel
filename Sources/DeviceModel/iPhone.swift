@@ -5,7 +5,6 @@
 // https://theapplewiki.com/wiki/Models
 
 public enum iPhone: String {
-    case arm64 = "arm64"
     case iPhone1_1 = "iPhone1,1"
     case iPhone1_2 = "iPhone1,2"
     case iPhone2_1 = "iPhone2,1"
@@ -76,7 +75,6 @@ public enum iPhone: String {
 
     public var name: String {
         switch self {
-        case .arm64: "iPhone Simulator"
         case .iPhone1_1: "iPhone"
         case .iPhone1_2: "iPhone 3G"
         case .iPhone2_1: "iPhone 3GS"
@@ -145,5 +143,41 @@ public enum iPhone: String {
         case .iPhone19_4: "iPhone Duo"
         case .iPhone19_7: "iPhone 18 Pro Max"
         }
+    }
+    public var displayCutout: DisplayCutout? {
+        switch self {
+        case .iPhone10_3, .iPhone10_6:
+            fallthrough
+        case .iPhone11_2, .iPhone11_4, .iPhone11_6, .iPhone11_8:
+            fallthrough
+        case .iPhone12_1, .iPhone12_3, .iPhone12_5:
+            fallthrough
+        case .iPhone13_1, .iPhone13_2, .iPhone13_3, .iPhone13_4:
+            fallthrough
+        case .iPhone14_2, .iPhone14_3, .iPhone14_4, .iPhone14_5, .iPhone14_7, .iPhone14_8:
+            fallthrough
+        case .iPhone17_5, .iPhone18_5:
+            .notch
+        case .iPhone15_2, .iPhone15_3, .iPhone15_4, .iPhone15_5:
+            fallthrough
+        case .iPhone16_1, .iPhone16_2:
+            fallthrough
+        case .iPhone17_1, .iPhone17_2, .iPhone17_3, .iPhone17_4:
+            fallthrough
+        case .iPhone18_1, .iPhone18_2, .iPhone18_3, .iPhone18_4:
+            fallthrough
+        case .iPhone19_2, .iPhone19_3, .iPhone19_4, .iPhone19_7:
+            .punchHole
+        default:
+            nil
+        }
+    }
+
+    public var hasNotch: Bool {
+        displayCutout == .notch
+    }
+
+    public var hasPunchHole: Bool {
+        displayCutout == .punchHole
     }
 }

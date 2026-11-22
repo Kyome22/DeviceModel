@@ -391,7 +391,7 @@ public enum Macintosh: String {
         }
     }
 
-    public var hasNotch: Bool {
+    public var displayCutout: DisplayCutout? {
         switch self {
         case .Mac14_2, .Mac14_5, .Mac14_6, .Mac14_7, .Mac14_9, .Mac14_10, .Mac14_15:
             fallthrough
@@ -404,9 +404,19 @@ public enum Macintosh: String {
         case .Mac18_1:
             fallthrough
         case .MacBookPro18_1, .MacBookPro18_2, .MacBookPro18_3, .MacBookPro18_4:
-            true
+            .notch
+        case .Mac17_10, .Mac17_11, .Mac17_12, .Mac17_13:
+            .punchHole
         default:
-            false
+            nil
         }
+    }
+
+    public var hasNotch: Bool {
+        displayCutout == .notch
+    }
+
+    public var hasPunchHole: Bool {
+        displayCutout == .punchHole
     }
 }
