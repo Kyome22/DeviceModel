@@ -9,6 +9,17 @@ public enum DeviceModel {
     case iPhone(iPhone)
     case iPad(iPad)
 
+    public var rawValue: String {
+        switch self {
+        case let .Macintosh(value):
+            value.rawValue
+        case let .iPhone(value):
+            value.rawValue
+        case let .iPad(value):
+            value.rawValue
+        }
+    }
+
     public var name: String {
         switch self {
         case let .Macintosh(value):
