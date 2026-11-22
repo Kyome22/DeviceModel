@@ -393,7 +393,7 @@ public enum Macintosh: String, Sendable {
 
     public var displayCutout: DisplayCutout? {
         switch self {
-        case .Mac14_2, .Mac14_5, .Mac14_6, .Mac14_7, .Mac14_9, .Mac14_10, .Mac14_15:
+        case .Mac14_2, .Mac14_5, .Mac14_6, .Mac14_9, .Mac14_10, .Mac14_15:
             fallthrough
         case .Mac15_3, .Mac15_6, .Mac15_7, .Mac15_8, .Mac15_9, .Mac15_10, .Mac15_11, .Mac15_12, .Mac15_13:
             fallthrough
