@@ -4,7 +4,7 @@ typealias _Macintosh = Macintosh
 typealias _iPhone = iPhone
 typealias _iPad = iPad
 
-public enum DeviceModel {
+public enum DeviceModel: Sendable {
     case Macintosh(Macintosh)
     case iPhone(iPhone)
     case iPad(iPad)
