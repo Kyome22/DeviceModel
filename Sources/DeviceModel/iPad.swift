@@ -4,7 +4,7 @@
 // The Apple Wiki - Models
 // https://theapplewiki.com/wiki/Models
 
-public enum iPad: String {
+public enum iPad: String, Sendable {
     case iPad1_1 = "iPad1,1"
     case iPad1_2 = "iPad1,2"
     case iPad2_1 = "iPad2,1"

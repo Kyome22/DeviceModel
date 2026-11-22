@@ -20,7 +20,7 @@
 // https://support.apple.com/en-us/108052
 //
 
-public enum Macintosh: String {
+public enum Macintosh: String, Sendable {
     case iMac4_1 = "iMac4,1"
     case iMac4_2 = "iMac4,2"
     case iMac5_1 = "iMac5,1"

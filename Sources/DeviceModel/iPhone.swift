@@ -4,7 +4,7 @@
 // The Apple Wiki - Models
 // https://theapplewiki.com/wiki/Models
 
-public enum iPhone: String {
+public enum iPhone: String, Sendable {
     case iPhone1_1 = "iPhone1,1"
     case iPhone1_2 = "iPhone1,2"
     case iPhone2_1 = "iPhone2,1"
